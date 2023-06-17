@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Поиск{% endblock %}
+
+{% block content %}
+  <h1 class="text-2xl mb-3 text-center">Поиск</h1>
+
+  <h2 class="text-xs text-gray-60">Поиск результатов "{{query}}": </h2>
+
+  {% if products %}
+    {% include 'store/partials/products.html' %}
+  {% else %}
+    <p>Нет совпадающих товаров</p>
+  {% endif %}
+  {% endblock %}
